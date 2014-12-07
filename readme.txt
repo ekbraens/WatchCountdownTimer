@@ -9,3 +9,7 @@ help the masses with technology, what a nobel cause.
 …with a timer. 
 
 tiny steps
+
+wanted to give a source for the inspiration to try this out
+http://www.codingexplorer.com/wkinterfacetimer-add-countdown-swift-watchkit-app/
+thanks
