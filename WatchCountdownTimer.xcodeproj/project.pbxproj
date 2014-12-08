@@ -22,6 +22,7 @@
 		D50CD8E61A341D380065B6F6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50CD8E51A341D380065B6F6 /* Interface.storyboard */; };
 		D50CD8E81A341D380065B6F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50CD8E71A341D380065B6F6 /* Images.xcassets */; };
 		D50CD8EB1A341D380065B6F6 /* WatchCountdownTimer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D50CD8CD1A341D380065B6F6 /* WatchCountdownTimer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D597C99C1A354B350079A725 /* TimerButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = D597C99B1A354B350079A725 /* TimerButtons.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		D50CD8E41A341D380065B6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D50CD8E51A341D380065B6F6 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		D50CD8E71A341D380065B6F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D597C99A1A354B350079A725 /* TimerButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerButtons.h; sourceTree = "<group>"; };
+		D597C99B1A354B350079A725 /* TimerButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerButtons.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +198,8 @@
 				D50CD8D51A341D380065B6F6 /* InterfaceController.m */,
 				D50CD8D71A341D380065B6F6 /* GlanceController.h */,
 				D50CD8D81A341D380065B6F6 /* GlanceController.m */,
+				D597C99A1A354B350079A725 /* TimerButtons.h */,
+				D597C99B1A354B350079A725 /* TimerButtons.m */,
 				D50CD8DA1A341D380065B6F6 /* Images.xcassets */,
 				D50CD8D21A341D380065B6F6 /* Supporting Files */,
 			);
@@ -407,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D50CD8D61A341D380065B6F6 /* InterfaceController.m in Sources */,
+				D597C99C1A354B350079A725 /* TimerButtons.m in Sources */,
 				D50CD8D91A341D380065B6F6 /* GlanceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,6 +662,7 @@
 				D50CD8C51A341D1B0065B6F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D50CD8C61A341D1B0065B6F6 /* Build configuration list for PBXNativeTarget "WatchCountdownTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -664,6 +671,7 @@
 				D50CD8C81A341D1B0065B6F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D50CD8EC1A341D380065B6F6 /* Build configuration list for PBXNativeTarget "WatchCountdownTimer Watch App" */ = {
 			isa = XCConfigurationList;
@@ -672,6 +680,7 @@
 				D50CD8EE1A341D380065B6F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D50CD8EF1A341D380065B6F6 /* Build configuration list for PBXNativeTarget "WatchCountdownTimer WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -680,6 +689,7 @@
 				D50CD8F11A341D380065B6F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

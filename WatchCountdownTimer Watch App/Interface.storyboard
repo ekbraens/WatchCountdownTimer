@@ -5,22 +5,68 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Timer-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller title="Timer" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
                         <timer width="1" alignment="center" verticalAlignment="center" textAlignment="center" numberOfLines="0" enabled="YES" format="abbreviated" previewedSeconds="101" id="hAo-s6-Clg">
                             <color key="textColor" red="0.3497767047" green="0.052037898169999999" blue="0.41559103260000002" alpha="1" colorSpace="calibratedRGB"/>
                             <calendarUnit key="units" minute="YES" second="YES"/>
                         </timer>
                     </items>
+                    <menu key="menu" id="bdm-8C-z2G">
+                        <items>
+                            <menuItem title="30 sec" icon="more" id="LBs-1v-mw0"/>
+                            <menuItem title="1 min" icon="more" id="6CJ-kk-aBv"/>
+                            <menuItem title="5 min" icon="more" id="zYi-8j-671"/>
+                            <menuItem title="10 min" icon="more" id="es1-nL-W2y"/>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="timer" destination="hAo-s6-Clg" id="u8n-jg-dip"/>
+                        <segue destination="V5O-u0-BjJ" kind="relationship" relationship="nextPage" id="sW6-7G-cXW"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="164" y="217"/>
+            <point key="canvasLocation" x="158" y="215"/>
+        </scene>
+        <!--Set Time-->
+        <scene sceneID="k7J-Mg-fOO">
+            <objects>
+                <controller title="Set Time" id="V5O-u0-BjJ" customClass="TimerButtons">
+                    <items>
+                        <group width="1" height="35" alignment="left" hasDetent="YES" id="MQC-RQ-pl4">
+                            <items>
+                                <button width="0.40000000000000013" alignment="left" title="0" id="c6e-Cc-jIJ"/>
+                                <label width="0.60000000000000009" height="1" alignment="right" text="Label" textAlignment="right" id="hCb-mM-Tfy"/>
+                            </items>
+                        </group>
+                        <group width="1" height="35" alignment="left" hasDetent="YES" id="fn5-2l-M6S">
+                            <items>
+                                <button width="44" alignment="left" title="7" id="bvc-Og-pVl"/>
+                                <button width="44" alignment="center" title="8" id="0oE-jc-KHr"/>
+                                <button width="44" alignment="right" title="9" id="rtJ-4n-YKa"/>
+                            </items>
+                        </group>
+                        <group width="1" height="35" alignment="left" hasDetent="YES" id="5ii-Xx-gPZ">
+                            <items>
+                                <button width="44" alignment="left" title="4" id="nfR-Du-pgU"/>
+                                <button width="44" alignment="center" title="5" id="ec3-yq-uj5"/>
+                                <button width="44" alignment="right" title="6" id="Iab-qb-dgB"/>
+                            </items>
+                        </group>
+                        <group width="1" height="35" alignment="left" hasDetent="YES" id="ZJ1-pU-dWO">
+                            <items>
+                                <button width="44" alignment="left" title="1" id="VHr-Y1-C8w"/>
+                                <button width="44" alignment="center" title="2" id="i3i-6b-WaX"/>
+                                <button width="44" alignment="right" title="3" id="ou5-Gx-fpt"/>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="352" y="215"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">

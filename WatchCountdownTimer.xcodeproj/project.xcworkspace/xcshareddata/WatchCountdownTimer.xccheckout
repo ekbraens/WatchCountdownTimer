@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>43508FFC-FE95-4605-86CE-0E4B523119F6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WatchCountdownTimer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C59782B9AA3E2E30D27DD5204F31ACF4B94401C9</key>
+		<string>https://github.com/ekbraens/WatchCountdownTimer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WatchCountdownTimer.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C59782B9AA3E2E30D27DD5204F31ACF4B94401C9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ekbraens/WatchCountdownTimer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C59782B9AA3E2E30D27DD5204F31ACF4B94401C9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C59782B9AA3E2E30D27DD5204F31ACF4B94401C9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WatchCountdownTimer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
