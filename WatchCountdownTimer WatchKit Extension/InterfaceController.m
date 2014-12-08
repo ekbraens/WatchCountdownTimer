@@ -5,17 +5,24 @@
 //  Created by New on 12/6/14.
 //  Copyright (c) 2014 Braen. All rights reserved.
 //
-// set timer with calulator type buttons
-// use menu to increment common increases in timer 30sec 1 minute
+// set timer with calulator type buttons :: DONE!
+// use menu to increment "common" increases in timer 30sec 1 minute :: DONE!
+// make sure when the timer reaches zero, you can still increment "common" increases :: TODO
+// transfer "intput" from 2nd watchface to initial one... how? DELEGATION!! :: TODO
 
 #import "InterfaceController.h"
+#import "TimerButtons.h"
 
 @interface InterfaceController()
 
 @property (weak, nonatomic) IBOutlet WKInterfaceTimer *timer;
+@property (nonatomic, strong) NSDate * targetTime;
+
+//might not need, not sure how to connect yet
+@property (nonatomic, strong) TimerButtons * timerButtonScreen;
+@property (nonatomic) int timeFromButtonScreen;
 
 @end
-
 
 @implementation InterfaceController
 
@@ -25,18 +32,66 @@
         // Initialize variables here.
         // Configure interface objects here.
         NSLog(@"%@ initWithContext", self);
+        _timeFromButtonScreen = 0;
+        _timerButtonScreen = [[TimerButtons alloc] init];
+        
+        // this would work if i was using modal segues
+        // but because i am using page based, all initWithContexts are called at once
+        // so i think delegation is in order
+        /*
+        if (context)
+        {
+            NSString * testString = [[NSString alloc] initWithString:context];
+            NSLog(@"%@", testString);
+        }
+        //_timerButtonScreen = context;
+         */
         
         // make the target time 30 seconds from now (NSDate date)
-        NSDate * targetTime = [NSDate dateWithTimeInterval:30 sinceDate:[NSDate date]];
+        _targetTime = [NSDate dateWithTimeInterval:30 sinceDate:[NSDate date]];
         // give the timer this information with setDate
-        [self.timer setDate:targetTime];
+        [self.timer setDate:_targetTime];
     }
     return self;
 }
 
+#pragma mark - Menu Buttons
+
+- (IBAction)thirtySecondsAdd {
+    _targetTime = [NSDate dateWithTimeInterval:30 sinceDate:_targetTime];
+    [self.timer setDate:_targetTime];
+}
+- (IBAction)oneMinuteAdd {
+    _targetTime = [NSDate dateWithTimeInterval:60 sinceDate:_targetTime];
+    [self.timer setDate:_targetTime];
+}
+- (IBAction)fiveMinuteAdd {
+    _targetTime = [NSDate dateWithTimeInterval:300 sinceDate:_targetTime];
+    [self.timer setDate:_targetTime];
+}
+- (IBAction)tenMinuteAdd {
+    return;
+}
+
+
+#pragma mark - De/Activate
+
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     NSLog(@"%@ will activate", self);
+    
+    // will end up needing if I can somehow connect the class from storyboard to this class
+    // maybe a singleton?
+    // dont forget to initialize in initWithContext
+    
+    if (_timerButtonScreen.timeIntput != 0)
+    {
+        _timeFromButtonScreen = _timerButtonScreen.timeIntput;
+        NSDate * targetTime = [NSDate dateWithTimeInterval:_timeFromButtonScreen
+                                                 sinceDate:[NSDate date]];
+        [self.timer setDate:targetTime];
+    }
+    
 }
 
 - (void)didDeactivate {

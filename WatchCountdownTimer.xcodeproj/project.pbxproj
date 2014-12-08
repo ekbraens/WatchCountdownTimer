@@ -196,10 +196,10 @@
 			children = (
 				D50CD8D41A341D380065B6F6 /* InterfaceController.h */,
 				D50CD8D51A341D380065B6F6 /* InterfaceController.m */,
-				D50CD8D71A341D380065B6F6 /* GlanceController.h */,
-				D50CD8D81A341D380065B6F6 /* GlanceController.m */,
 				D597C99A1A354B350079A725 /* TimerButtons.h */,
 				D597C99B1A354B350079A725 /* TimerButtons.m */,
+				D50CD8D71A341D380065B6F6 /* GlanceController.h */,
+				D50CD8D81A341D380065B6F6 /* GlanceController.m */,
 				D50CD8DA1A341D380065B6F6 /* Images.xcassets */,
 				D50CD8D21A341D380065B6F6 /* Supporting Files */,
 			);

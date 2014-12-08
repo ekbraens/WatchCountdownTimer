@@ -10,4 +10,7 @@
 
 @interface TimerButtons : WKInterfaceController
 
+@property (nonatomic, strong) NSNumber * TimeInput;
+@property (nonatomic) int timeIntput;
+
 @end
