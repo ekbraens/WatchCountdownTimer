@@ -11,7 +11,6 @@
 // transfer "intput" from 2nd watchface to initial one... how? DELEGATION!! :: TODO
 
 #import "InterfaceController.h"
-#import "TimerButtons.h"
 
 @interface InterfaceController()
 
@@ -19,8 +18,8 @@
 @property (nonatomic, strong) NSDate * targetTime;
 
 //might not need, not sure how to connect yet
-@property (nonatomic, strong) TimerButtons * timerButtonScreen;
-@property (nonatomic) int timeFromButtonScreen;
+//@property (nonatomic, strong) TimerButtons * timerButtonScreen;
+//@property (nonatomic) int timeFromButtonScreen;
 
 @end
 
@@ -32,13 +31,14 @@
         // Initialize variables here.
         // Configure interface objects here.
         NSLog(@"%@ initWithContext", self);
+        /*
         _timeFromButtonScreen = 0;
         _timerButtonScreen = [[TimerButtons alloc] init];
         
         // this would work if i was using modal segues
         // but because i am using page based, all initWithContexts are called at once
         // so i think delegation is in order
-        /*
+        
         if (context)
         {
             NSString * testString = [[NSString alloc] initWithString:context];
@@ -83,7 +83,7 @@
     // will end up needing if I can somehow connect the class from storyboard to this class
     // maybe a singleton?
     // dont forget to initialize in initWithContext
-    
+    /*
     if (_timerButtonScreen.timeIntput != 0)
     {
         _timeFromButtonScreen = _timerButtonScreen.timeIntput;
@@ -91,7 +91,25 @@
                                                  sinceDate:[NSDate date]];
         [self.timer setDate:targetTime];
     }
+    */
     
+    // #4/4 initilize the delgate class, set .delegate to self, use the method!
+    TimerButtons * timerButton = [[TimerButtons alloc] init];
+    if (timerButton)
+    {
+        timerButton.delegate = self;
+        [timerButton transferOfIntputDelegate];
+    }
+}
+
+-(void)moveIntputOver:(int)timerTransfer
+{
+    if (timerTransfer != 0)
+    {
+        NSDate * targetTime = [NSDate dateWithTimeInterval:timerTransfer
+                                             sinceDate:[NSDate date]];
+        [self.timer setDate:targetTime];
+    }
 }
 
 - (void)didDeactivate {

@@ -8,7 +8,10 @@
 
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
+#import "TimerButtons.h"
 
-@interface InterfaceController : WKInterfaceController
+// #3/4 import the header of the _delegate (above)
+//      put the protocol ...Delgate inside the <> (below)
+@interface InterfaceController : WKInterfaceController <TimerButtonsDelegate>
 
 @end

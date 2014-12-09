@@ -110,7 +110,14 @@
     return self.totalValue;
 }
 */
- 
+
+// #2/4 use the public delegate method to put protocol method inside
+//      transfer self with the _delegate
+-(void)transferOfIntputDelegate
+{
+    [_delegate moveIntputOver:_timeIntput];
+}
+
 #pragma mark - De/Activate
 
 - (void)willActivate {
@@ -126,8 +133,7 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     NSLog(@"%i", _timeIntput);
+    [self transferOfIntputDelegate];
 }
-
-
 
 @end

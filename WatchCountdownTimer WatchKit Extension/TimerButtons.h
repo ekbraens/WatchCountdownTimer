@@ -8,9 +8,19 @@
 
 #import <WatchKit/WatchKit.h>
 
+// #1/4 make the protocol and use this method inside THIS class
+@protocol TimerButtonsDelegate
+
+-(void)moveIntputOver:(int)timerButtons;
+
+@end
+
+
 @interface TimerButtons : WKInterfaceController
 
-@property (nonatomic, strong) NSNumber * TimeInput;
 @property (nonatomic) int timeIntput;
+
+@property (nonatomic, assign) id  delegate;
+-(void)transferOfIntputDelegate;
 
 @end
