@@ -40,6 +40,7 @@
         [_sTimeLabel setText:_totalValue];
         
         self.timeIntput = [_totalValue intValue];
+        [self timeInputMovement];
     }
 }
 - (IBAction)onePressed {
@@ -47,75 +48,72 @@
     [_sTimeLabel setText:_totalValue];
     
     self.timeIntput = [_totalValue intValue];
+    [self timeInputMovement];
 }
 - (IBAction)twoPressed {
     [self.totalValue appendString:@"2"];
     [_sTimeLabel setText:_totalValue];
     
     self.timeIntput = [_totalValue intValue];
+    [self timeInputMovement];
 }
 - (IBAction)threePressed {
     [self.totalValue appendString:@"3"];
     [_sTimeLabel setText:_totalValue];
     
     self.timeIntput = [_totalValue intValue];
+    [self timeInputMovement];
 }
 - (IBAction)fourPressed {
     [self.totalValue appendString:@"4"];
     [_sTimeLabel setText:_totalValue];
     
     self.timeIntput = [_totalValue intValue];
+    [self timeInputMovement];
 }
 - (IBAction)fivePressed {
     [self.totalValue appendString:@"5"];
     [_sTimeLabel setText:_totalValue];
     
     self.timeIntput = [_totalValue intValue];
+    [self timeInputMovement];
 }
 - (IBAction)sixPressed {
     [self.totalValue appendString:@"6"];
     [_sTimeLabel setText:_totalValue];
     
     self.timeIntput = [_totalValue intValue];
+    [self timeInputMovement];
 }
 - (IBAction)sevenPressed {
     [self.totalValue appendString:@"7"];
     [_sTimeLabel setText:_totalValue];
     
     self.timeIntput = [_totalValue intValue];
+    [self timeInputMovement];
 }
 - (IBAction)eightPressed {
     [self.totalValue appendString:@"8"];
     [_sTimeLabel setText:_totalValue];
     
     self.timeIntput = [_totalValue intValue];
+    [self timeInputMovement];
 }
 - (IBAction)ninePressed {
     [self.totalValue appendString:@"9"];
     [_sTimeLabel setText:_totalValue];
     
     self.timeIntput = [_totalValue intValue];
+    [self timeInputMovement];
 }
 
 #pragma mark - Data Movement
 
-// see interfacecontroller init for explanation
-/*
-- (IBAction)goToMainEntry {
-    //[self presentControllerWithName:@"TimerButtonSetting" context:self.totalValue];
-    [self contextForSegueWithIdentifier:@"TimerButtonSetting"];
-}
--(id)contextForSegueWithIdentifier:(NSString *)segueIdentifier
+-(void)timeInputMovement
 {
-    return self.totalValue;
-}
-*/
-
-// #2/4 use the public delegate method to put protocol method inside
-//      transfer self with the _delegate
--(void)transferOfIntputDelegate
-{
-    [_delegate moveIntputOver:_timeIntput];
+    NSUserDefaults * timeTransfer = [[NSUserDefaults alloc] init];
+    int i = [_totalValue intValue];
+    [timeTransfer setDouble:i forKey:@"timeTransfer"];
 }
 
 #pragma mark - De/Activate
@@ -132,8 +130,8 @@
 
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
+    NSLog(@"TimerButtons will deactivate");
     NSLog(@"%i", _timeIntput);
-    [self transferOfIntputDelegate];
 }
 
 @end

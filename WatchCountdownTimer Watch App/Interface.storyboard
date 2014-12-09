@@ -59,12 +59,7 @@
                                         <action selector="zeroPressed" destination="V5O-u0-BjJ" id="wNc-ud-UWZ"/>
                                     </connections>
                                 </button>
-                                <button width="30" alignment="center" title="+" id="Pc9-3t-bej">
-                                    <connections>
-                                        <action selector="goToMainEntry" destination="V5O-u0-BjJ" id="ZcJ-JN-7Jw"/>
-                                    </connections>
-                                </button>
-                                <label width="57" height="1" alignment="right" text="Label" textAlignment="right" id="hCb-mM-Tfy"/>
+                                <label width="0.60000000000000009" height="1" alignment="right" text="Label" textAlignment="right" id="hCb-mM-Tfy"/>
                             </items>
                         </group>
                         <group width="1" height="35" alignment="left" hasDetent="YES" id="fn5-2l-M6S">

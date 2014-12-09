@@ -19,7 +19,7 @@
 
 //might not need, not sure how to connect yet
 //@property (nonatomic, strong) TimerButtons * timerButtonScreen;
-//@property (nonatomic) int timeFromButtonScreen;
+@property (nonatomic) double timeFromButtonScreen;
 
 @end
 
@@ -92,22 +92,12 @@
         [self.timer setDate:targetTime];
     }
     */
-    
-    // #4/4 initilize the delgate class, set .delegate to self, use the method!
-    TimerButtons * timerButton = [[TimerButtons alloc] init];
-    if (timerButton)
+    NSUserDefaults * userTimePreference = [[NSUserDefaults alloc] init];
+    _timeFromButtonScreen = [userTimePreference doubleForKey:@"timeTransfer"];
+    if (_timeFromButtonScreen != 0)
     {
-        timerButton.delegate = self;
-        [timerButton transferOfIntputDelegate];
-    }
-}
-
--(void)moveIntputOver:(int)timerTransfer
-{
-    if (timerTransfer != 0)
-    {
-        NSDate * targetTime = [NSDate dateWithTimeInterval:timerTransfer
-                                             sinceDate:[NSDate date]];
+        NSDate * targetTime = [NSDate dateWithTimeInterval:_timeFromButtonScreen
+                                                 sinceDate:[NSDate date]];
         [self.timer setDate:targetTime];
     }
 }
