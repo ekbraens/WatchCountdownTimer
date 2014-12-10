@@ -7,8 +7,9 @@
 //
 // set timer with calulator type buttons :: DONE!
 // use menu to increment "common" increases in timer 30sec 1 minute :: DONE!
+// transfer "intput" from 2nd watchface to initial one... how? DELEGATION!! :: DONE!
 // make sure when the timer reaches zero, you can still increment "common" increases :: TODO
-// transfer "intput" from 2nd watchface to initial one... how? DELEGATION!! :: TODO
+// make new time selection screen, using tables for minutes and seconds :: TODO
 
 #import "InterfaceController.h"
 
@@ -73,25 +74,12 @@
     return;
 }
 
-
 #pragma mark - De/Activate
 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     NSLog(@"%@ will activate", self);
     
-    // will end up needing if I can somehow connect the class from storyboard to this class
-    // maybe a singleton?
-    // dont forget to initialize in initWithContext
-    /*
-    if (_timerButtonScreen.timeIntput != 0)
-    {
-        _timeFromButtonScreen = _timerButtonScreen.timeIntput;
-        NSDate * targetTime = [NSDate dateWithTimeInterval:_timeFromButtonScreen
-                                                 sinceDate:[NSDate date]];
-        [self.timer setDate:targetTime];
-    }
-    */
     NSUserDefaults * userTimePreference = [[NSUserDefaults alloc] init];
     _timeFromButtonScreen = [userTimePreference doubleForKey:@"timeTransfer"];
     if (_timeFromButtonScreen != 0)

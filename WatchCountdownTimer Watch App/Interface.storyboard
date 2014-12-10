@@ -127,6 +127,80 @@
             </objects>
             <point key="canvasLocation" x="352" y="214.5"/>
         </scene>
+        <!--Interface Controller-->
+        <scene sceneID="7bB-l7-AxF">
+            <objects>
+                <controller id="0hP-gA-Lf2">
+                    <items>
+                        <group height="0.50000000000000011" alignment="center" hasDetent="YES" id="ycI-El-jtg">
+                            <items>
+                                <table alignment="left" layout="vertical" id="4by-nB-TMD">
+                                    <items>
+                                        <tableRow identifier="TimeM" id="7Wr-La-e7k">
+                                            <group key="rootItem" width="1" alignment="left" id="wky-WW-xTE"/>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                            </items>
+                        </group>
+                        <group height="0.50000000000000011" alignment="center" verticalAlignment="bottom" hasDetent="YES" id="fO0-Gl-vvO">
+                            <items>
+                                <table alignment="left" layout="vertical" id="zeE-cE-ipZ">
+                                    <items>
+                                        <tableRow identifier="TimeS" id="CRP-mv-pT2">
+                                            <group key="rootItem" width="1" alignment="left" id="GKy-Ly-8fI"/>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="543" y="467"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="cn7-VW-7Oz">
+            <objects>
+                <controller id="Wjf-ez-gp0">
+                    <items>
+                        <group height="0.10000000000000014" alignment="center" hasDetent="YES" id="h0v-NH-Z7o">
+                            <items>
+                                <label width="1" height="1" alignment="center" text="Minutes" textAlignment="center" id="PXb-4x-H0Y"/>
+                            </items>
+                        </group>
+                        <group height="0.40000000000000013" alignment="center" hasDetent="YES" id="nWZ-rC-3Xs">
+                            <items>
+                                <table alignment="left" layout="vertical" id="VKP-Mg-muv">
+                                    <items>
+                                        <tableRow identifier="MinutesToucher" id="9j8-w6-U0F">
+                                            <group key="rootItem" width="1" alignment="left" id="DSE-vY-YeK"/>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                            </items>
+                        </group>
+                        <group height="0.10000000000000014" alignment="left" hasDetent="YES" id="WcM-Bg-gYd">
+                            <items>
+                                <label width="1" height="1" alignment="center" text="Seconds" textAlignment="center" id="E7O-Qr-Gf6"/>
+                            </items>
+                        </group>
+                        <group height="0.40000000000000013" alignment="center" verticalAlignment="bottom" hasDetent="YES" id="12Q-y7-MYW">
+                            <items>
+                                <table alignment="left" layout="vertical" id="Ky7-1U-INJ">
+                                    <items>
+                                        <tableRow identifier="SecondsToucher" id="lGf-jb-5k9">
+                                            <group key="rootItem" width="1" alignment="left" id="Qww-wo-nxh"/>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="543" y="214"/>
+        </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
             <objects>
