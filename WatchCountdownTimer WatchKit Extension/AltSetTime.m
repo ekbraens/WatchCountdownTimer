@@ -71,7 +71,7 @@
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [self configureMinTableWithData];
-    [self configureSecTableWithData];
+    //[self configureSecTableWithData];
     
     NSLog(@"%@ will activate", self);
 }
