@@ -41,7 +41,7 @@
                     </menu>
                     <connections>
                         <outlet property="timer" destination="hAo-s6-Clg" id="u8n-jg-dip"/>
-                        <segue destination="V5O-u0-BjJ" kind="relationship" relationship="nextPage" id="ATE-6q-bQV"/>
+                        <segue destination="Wjf-ez-gp0" kind="relationship" relationship="nextPage" id="ldQ-Kp-CUt"/>
                     </connections>
                 </controller>
             </objects>
@@ -125,7 +125,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="352" y="214.5"/>
+            <point key="canvasLocation" x="543" y="-23.5"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="7bB-l7-AxF">
@@ -157,12 +157,12 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="543" y="467"/>
+            <point key="canvasLocation" x="543" y="455"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Alt Set Time-->
         <scene sceneID="cn7-VW-7Oz">
             <objects>
-                <controller id="Wjf-ez-gp0">
+                <controller id="Wjf-ez-gp0" customClass="AltSetTime">
                     <items>
                         <group height="0.10000000000000014" alignment="center" hasDetent="YES" id="h0v-NH-Z7o">
                             <items>
@@ -173,8 +173,15 @@
                             <items>
                                 <table alignment="left" layout="vertical" id="VKP-Mg-muv">
                                     <items>
-                                        <tableRow identifier="MinutesToucher" id="9j8-w6-U0F">
-                                            <group key="rootItem" width="1" alignment="left" id="DSE-vY-YeK"/>
+                                        <tableRow identifier="MinutesToucher" id="9j8-w6-U0F" customClass="MinChooserATableRowCtrlr">
+                                            <group key="rootItem" width="1" alignment="left" id="DSE-vY-YeK">
+                                                <items>
+                                                    <label width="1" alignment="center" verticalAlignment="center" text="0" textAlignment="center" id="Zg4-Lh-Xhs"/>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <outlet property="minLabel" destination="Zg4-Lh-Xhs" id="DyC-F4-4RR"/>
+                                            </connections>
                                         </tableRow>
                                     </items>
                                 </table>
@@ -189,17 +196,28 @@
                             <items>
                                 <table alignment="left" layout="vertical" id="Ky7-1U-INJ">
                                     <items>
-                                        <tableRow identifier="SecondsToucher" id="lGf-jb-5k9">
-                                            <group key="rootItem" width="1" alignment="left" id="Qww-wo-nxh"/>
+                                        <tableRow identifier="SecondsToucher" id="lGf-jb-5k9" customClass="SecChooserATableRowCtrlr">
+                                            <group key="rootItem" width="1" alignment="left" id="Qww-wo-nxh">
+                                                <items>
+                                                    <label width="1" alignment="center" verticalAlignment="center" text="0" textAlignment="center" id="ac9-Up-l3r"/>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <outlet property="secLabel" destination="ac9-Up-l3r" id="A9G-Ng-YRO"/>
+                                            </connections>
                                         </tableRow>
                                     </items>
                                 </table>
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="minTable" destination="VKP-Mg-muv" id="cIa-VQ-GQc"/>
+                        <outlet property="secTable" destination="Ky7-1U-INJ" id="8PT-jb-MNi"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="543" y="214"/>
+            <point key="canvasLocation" x="543" y="214.00000207126141"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
