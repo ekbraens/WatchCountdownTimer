@@ -2,7 +2,7 @@
 //  SecChooserATableRowCtrlr.h
 //  WatchCountdownTimer
 //
-//  Created by New on 12/10/14.
+//  Created by New on 12/11/14.
 //  Copyright (c) 2014 Braen. All rights reserved.
 //
 
@@ -11,6 +11,6 @@
 
 @interface SecChooserATableRowCtrlr : NSObject
 
-@property (weak, nonatomic) IBOutlet WKInterfaceLabel *secLabel;
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *SecLabel;
 
 @end

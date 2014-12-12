@@ -41,7 +41,7 @@
                     </menu>
                     <connections>
                         <outlet property="timer" destination="hAo-s6-Clg" id="u8n-jg-dip"/>
-                        <segue destination="Wjf-ez-gp0" kind="relationship" relationship="nextPage" id="ldQ-Kp-CUt"/>
+                        <segue destination="Bu1-kZ-TEA" kind="relationship" relationship="nextPage" id="186-u6-khY"/>
                     </connections>
                 </controller>
             </objects>
@@ -127,42 +127,10 @@
             </objects>
             <point key="canvasLocation" x="543" y="-23.5"/>
         </scene>
-        <!--Interface Controller-->
-        <scene sceneID="7bB-l7-AxF">
-            <objects>
-                <controller id="0hP-gA-Lf2">
-                    <items>
-                        <group height="0.50000000000000011" alignment="center" hasDetent="YES" id="ycI-El-jtg">
-                            <items>
-                                <table alignment="left" layout="vertical" id="4by-nB-TMD">
-                                    <items>
-                                        <tableRow identifier="TimeM" id="7Wr-La-e7k">
-                                            <group key="rootItem" width="1" alignment="left" id="wky-WW-xTE"/>
-                                        </tableRow>
-                                    </items>
-                                </table>
-                            </items>
-                        </group>
-                        <group height="0.50000000000000011" alignment="center" verticalAlignment="bottom" hasDetent="YES" id="fO0-Gl-vvO">
-                            <items>
-                                <table alignment="left" layout="vertical" id="zeE-cE-ipZ">
-                                    <items>
-                                        <tableRow identifier="TimeS" id="CRP-mv-pT2">
-                                            <group key="rootItem" width="1" alignment="left" id="GKy-Ly-8fI"/>
-                                        </tableRow>
-                                    </items>
-                                </table>
-                            </items>
-                        </group>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="543" y="455"/>
-        </scene>
-        <!--Alt Set Time-->
+        <!--Wont Work-->
         <scene sceneID="cn7-VW-7Oz">
             <objects>
-                <controller id="Wjf-ez-gp0" customClass="AltSetTime">
+                <controller id="Wjf-ez-gp0" customClass="WontWork">
                     <items>
                         <group height="0.10000000000000014" alignment="center" hasDetent="YES" id="h0v-NH-Z7o">
                             <items>
@@ -179,9 +147,6 @@
                                                     <label width="1" alignment="center" verticalAlignment="center" text="0" textAlignment="center" id="Zg4-Lh-Xhs"/>
                                                 </items>
                                             </group>
-                                            <connections>
-                                                <outlet property="minLabel" destination="Zg4-Lh-Xhs" id="DyC-F4-4RR"/>
-                                            </connections>
                                         </tableRow>
                                     </items>
                                 </table>
@@ -202,9 +167,6 @@
                                                     <label width="1" alignment="center" verticalAlignment="center" text="0" textAlignment="center" id="ac9-Up-l3r"/>
                                                 </items>
                                             </group>
-                                            <connections>
-                                                <outlet property="secLabel" destination="ac9-Up-l3r" id="A9G-Ng-YRO"/>
-                                            </connections>
                                         </tableRow>
                                     </items>
                                 </table>
@@ -217,7 +179,44 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="543" y="214.00000207126141"/>
+            <point key="canvasLocation" x="543" y="458.0000010356307"/>
+        </scene>
+        <!--Alt Set Time-->
+        <scene sceneID="rjL-aH-d6e">
+            <objects>
+                <controller id="Bu1-kZ-TEA" customClass="AltSetTime">
+                    <items>
+                        <table alignment="left" layout="vertical" id="HV2-1Q-bIm">
+                            <items>
+                                <tableRow identifier="MinutesToucher" id="wG5-UC-7dd" customClass="MinChooserATableRowCtrlr">
+                                    <group key="rootItem" width="1" alignment="left" id="3de-da-brq">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="0" id="cXB-Ln-wEM"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="minLabel" destination="cXB-Ln-wEM" id="mLL-GG-qH1"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="SecondsToucher" id="lyC-gh-Chz" customClass="SecChooserATableRowCtrlr">
+                                    <group key="rootItem" width="1" alignment="left" id="afo-xV-ggi">
+                                        <items>
+                                            <label alignment="center" text="0" id="3q2-m3-F3R"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="SecLabel" destination="3q2-m3-F3R" id="ZLa-pf-FEM"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="minTable" destination="HV2-1Q-bIm" id="1u6-ne-57b"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="543" y="214"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
