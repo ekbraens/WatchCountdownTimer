@@ -186,7 +186,7 @@
             <objects>
                 <controller id="Bu1-kZ-TEA" customClass="AltSetTime">
                     <items>
-                        <table alignment="left" layout="vertical" id="HV2-1Q-bIm">
+                        <table alignment="left" verticalAlignment="center" layout="vertical" id="HV2-1Q-bIm">
                             <items>
                                 <tableRow identifier="MinutesToucher" id="wG5-UC-7dd" customClass="MinChooserATableRowCtrlr">
                                     <group key="rootItem" width="1" alignment="left" id="3de-da-brq">
@@ -201,7 +201,7 @@
                                 <tableRow identifier="SecondsToucher" id="lyC-gh-Chz" customClass="SecChooserATableRowCtrlr">
                                     <group key="rootItem" width="1" alignment="left" id="afo-xV-ggi">
                                         <items>
-                                            <label alignment="center" text="0" id="3q2-m3-F3R"/>
+                                            <label alignment="left" text="0" id="3q2-m3-F3R"/>
                                         </items>
                                     </group>
                                     <connections>

@@ -51,17 +51,27 @@
 }
 
 - (void)configureBothTables {
-    NSArray *rowTypes = [[NSArray alloc] initWithObjects:@"MinutesToucher", @"SecondsToucher", nil];
-    [self.minTable setRowTypes:rowTypes];
-    for (int i = 0; i < [self.minArray count]; i++)
+    NSMutableArray *typesStrings = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 100; ++i)
     {
-        MinChooserATableRowCtrlr * theRow = [self.minTable rowControllerAtIndex:0];
-        [theRow.minLabel setText:_minArray[i]];
+        [typesStrings addObject:@"MinutesToucher"];
     }
-    for (int i = 0; i < [self.secArray count]; i++)
+    for (int i = 0; i < 60; ++i)
     {
-        SecChooserATableRowCtrlr * theRow = [self.minTable rowControllerAtIndex:1];
-        [theRow.SecLabel setText:_secArray[i]];
+        [typesStrings addObject:@"SecondsToucher"];
+    }
+    
+    [self.minTable setRowTypes:typesStrings];
+
+    for (int i = 0; i < [_minArray count]; i++)
+    {
+        MinChooserATableRowCtrlr *theRow = [self.minTable rowControllerAtIndex:i];
+        [theRow.minLabel setText:[NSString stringWithFormat:@"%@ Mins", _minArray[i]]];
+    }
+    for (int i = 0; i < [_secArray count]; i++)
+    {
+        SecChooserATableRowCtrlr *theRow = [self.minTable rowControllerAtIndex:i + 100];
+        [theRow.SecLabel setText:[NSString stringWithFormat:@"%@ Secs", _secArray[i]]];
     }
 }
 
@@ -88,16 +98,6 @@
     }
 }
 
-/* old method not working
-- (void)configureSecTableWithData {
-    [self.secTable setNumberOfRows:[_secArray count] withRowType:@"SecondsToucher"];
-    for (NSInteger i = 0; i < self.secTable.numberOfRows; i++) {
-        SecChooserATableRowCtrlr * theRow = [self.secTable rowControllerAtIndex:i];
-     
-        [theRow.secLabel setText:_secArray[i]];
-    }
-}
-*/
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     //[self configureMinTableWithData];
