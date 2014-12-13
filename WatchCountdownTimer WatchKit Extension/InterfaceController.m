@@ -5,21 +5,25 @@
 //  Created by New on 12/6/14.
 //  Copyright (c) 2014 Braen. All rights reserved.
 //
-// set timer with calulator type buttons :: DONE!
-// use menu to increment "common" increases in timer 30sec 1 minute :: DONE!
-// transfer "intput" from 2nd watchface to initial one... how? DELEGATION!! :: DONE!
-// make sure when the timer reaches zero, you can still increment "common" increases :: TODO
-// make new time selection screen, using tables for minutes and seconds :: TODO
+// DONE! :: set timer with calulator type buttons
+// DONE! :: use menu to increment "common" increases in timer 30sec 1 minute
+// DONE! :: transfer "intput" from 2nd watchface to initial one... how?
+// SUSPENDED :: make new time selection screen, using tables for minutes and seconds
+//              i am still holding out hope that i can have two tables on one controller
+//              if not, it looks ugly and will have to try something different
+// TODO :: make sure when the timer reaches zero, you can still increment "common" increases
+// TODO :: make new scrolling interface, first for minutes, then it goes to seconds, then back
+// TODO :: thought!! use a slider to set the timer... hmmm?
+// TODO :: look into making the switch work
 
 #import "InterfaceController.h"
 
 @interface InterfaceController()
 
+@property (weak, nonatomic) IBOutlet WKInterfaceSwitch *stopSwitch;
 @property (weak, nonatomic) IBOutlet WKInterfaceTimer *timer;
 @property (nonatomic, strong) NSDate * targetTime;
 
-//might not need, not sure how to connect yet
-//@property (nonatomic, strong) TimerButtons * timerButtonScreen;
 @property (nonatomic) double timeFromButtonScreen;
 
 @end

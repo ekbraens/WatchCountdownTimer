@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSMutableArray * minArray;
 @property (nonatomic, strong) NSMutableArray * secArray;
 @property (nonatomic, strong) NSMutableString * arrayAssigner;
+@property (assign) int numOfChoices;
 
 @end
 
@@ -30,17 +31,18 @@
         // Initialize variables here.
         // Configure interface objects here.
         NSLog(@"%@ initWithContext", self);
+        _numOfChoices = 60;
         _arrayAssigner = [[NSMutableString alloc] init];
         
         _minArray = [[NSMutableArray alloc] init];
-        for (int i = 0; i < 100; ++i)
+        for (int i = 0; i < _numOfChoices; ++i)
         {
             _arrayAssigner = [NSMutableString stringWithFormat:@"%i", i];
             _minArray[i] = _arrayAssigner;
         }
         
         _secArray = [[NSMutableArray alloc] init];
-        for (int i = 0; i < 60; ++i)
+        for (int i = 0; i < _numOfChoices; ++i)
         {
             _arrayAssigner = [NSMutableString stringWithFormat:@"%i", i];
             _secArray[i] = _arrayAssigner;
@@ -52,11 +54,11 @@
 
 - (void)configureBothTables {
     NSMutableArray *typesStrings = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 100; ++i)
+    for (int i = 0; i < _numOfChoices; ++i)
     {
         [typesStrings addObject:@"MinutesToucher"];
     }
-    for (int i = 0; i < 60; ++i)
+    for (int i = 0; i < _numOfChoices; ++i)
     {
         [typesStrings addObject:@"SecondsToucher"];
     }
@@ -70,11 +72,13 @@
     }
     for (int i = 0; i < [_secArray count]; i++)
     {
-        SecChooserATableRowCtrlr *theRow = [self.minTable rowControllerAtIndex:i + 100];
+        SecChooserATableRowCtrlr *theRow = [self.minTable rowControllerAtIndex:i + _numOfChoices];
         [theRow.SecLabel setText:[NSString stringWithFormat:@"%@ Secs", _secArray[i]]];
     }
 }
 
+/* might seperate and use on seperate scrolling controllers
+ 
 - (void)configureMinTableWithData {
     NSArray *rowTypes = [[NSArray alloc] initWithObjects:@"MinutesToucher", @"SecondsToucher", nil];
     [self.minTable setRowTypes:rowTypes];
@@ -97,11 +101,10 @@
         [theRow.SecLabel setText:_secArray[i]];
     }
 }
-
+*/
+ 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
-    //[self configureMinTableWithData];
-    //[self configureSecTableWithData];
     
     [self configureBothTables];
     

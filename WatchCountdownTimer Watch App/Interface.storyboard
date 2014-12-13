@@ -14,6 +14,7 @@
                             <color key="textColor" red="0.3497767047" green="0.052037898169999999" blue="0.41559103260000002" alpha="1" colorSpace="calibratedRGB"/>
                             <calendarUnit key="units" minute="YES" second="YES"/>
                         </timer>
+                        <switch width="1" alignment="left" verticalAlignment="bottom" value="YES" title="Start/Stop" id="0dM-Pa-pUm"/>
                     </items>
                     <menu key="menu" id="bdm-8C-z2G">
                         <items>
@@ -40,6 +41,7 @@
                         </items>
                     </menu>
                     <connections>
+                        <outlet property="stopSwitch" destination="0dM-Pa-pUm" id="PZV-xu-VWy"/>
                         <outlet property="timer" destination="hAo-s6-Clg" id="u8n-jg-dip"/>
                         <segue destination="Bu1-kZ-TEA" kind="relationship" relationship="nextPage" id="186-u6-khY"/>
                     </connections>
@@ -180,6 +182,40 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="543" y="458.0000010356307"/>
+        </scene>
+        <!--Minutes?-->
+        <scene sceneID="Z30-WZ-VNJ">
+            <objects>
+                <controller title="Minutes?" id="OsW-Ft-j4L">
+                    <items>
+                        <table alignment="left" layout="vertical" id="XzM-Rk-nw2">
+                            <items>
+                                <tableRow id="Ctg-zx-iKX">
+                                    <group key="rootItem" width="1" alignment="left" id="8Ue-yp-kwf"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="543" y="697"/>
+        </scene>
+        <!--Seconds?-->
+        <scene sceneID="yvY-6l-ydo">
+            <objects>
+                <controller title="Seconds?" id="WWS-Zz-SCn">
+                    <items>
+                        <table alignment="left" layout="vertical" id="uun-rI-ceV">
+                            <items>
+                                <tableRow id="c08-yh-ZnI">
+                                    <group key="rootItem" width="1" alignment="left" id="eMs-Na-Pvg"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="722" y="698"/>
         </scene>
         <!--Alt Set Time-->
         <scene sceneID="rjL-aH-d6e">
