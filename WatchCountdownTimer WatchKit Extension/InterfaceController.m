@@ -8,6 +8,8 @@
 // DONE! :: set timer with calulator type buttons
 // DONE! :: use menu to increment "common" increases in timer 30sec 1 minute
 // DONE! :: transfer "intput" from 2nd watchface to initial one... how?
+// DONE! :: look into making the switch work
+
 // SUSPENDED :: make new time selection screen, using tables for minutes and seconds
 //              i am still holding out hope that i can have two tables on one controller
 //              if not, it looks ugly and will have to try something different
@@ -76,6 +78,25 @@
 }
 - (IBAction)tenMinuteAdd {
     return;
+}
+
+#pragma mark - Switch
+
+// although the switch is set up there is a known bug
+// the stop method of wkinterfacetimer does not acutally stop the countdown
+// so this is pretty much useless, but im going to keep it here anyway
+// i think it looks nice and maybe it will be supported eventually
+- (IBAction)switchAction:(BOOL)state
+{
+    if (state == FALSE)
+    {
+        [_timer stop];
+        
+    }
+    if (state == TRUE)
+    {
+        [_timer start];
+    }
 }
 
 #pragma mark - De/Activate
