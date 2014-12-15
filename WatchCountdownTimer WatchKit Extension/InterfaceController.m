@@ -9,14 +9,13 @@
 // DONE! :: use menu to increment "common" increases in timer 30sec 1 minute
 // DONE! :: transfer "intput" from 2nd watchface to initial one... how?
 // DONE! :: look into making the switch work
+// DONE! :: make new scrolling interface, first for minutes, then it goes to seconds, then back
 
 // SUSPENDED :: make new time selection screen, using tables for minutes and seconds
 //              i am still holding out hope that i can have two tables on one controller
 //              if not, it looks ugly and will have to try something different
 // TODO :: make sure when the timer reaches zero, you can still increment "common" increases
-// TODO :: make new scrolling interface, first for minutes, then it goes to seconds, then back
 // TODO :: thought!! use a slider to set the timer... hmmm?
-// TODO :: look into making the switch work
 
 #import "InterfaceController.h"
 
@@ -27,6 +26,8 @@
 @property (nonatomic, strong) NSDate * targetTime;
 
 @property (nonatomic) double timeFromButtonScreen;
+@property (nonatomic) double minutesFromTableScreen;
+@property (nonatomic) double secondsFromTableScreen;
 
 @end
 
@@ -105,6 +106,9 @@
     // This method is called when watch view controller is about to be visible to user
     NSLog(@"%@ will activate", self);
     
+    /*
+     // for TimerButtons interface controllers
+     //
     NSUserDefaults * userTimePreference = [[NSUserDefaults alloc] init];
     _timeFromButtonScreen = [userTimePreference doubleForKey:@"timeTransfer"];
     if (_timeFromButtonScreen != 0)
@@ -113,6 +117,21 @@
                                                  sinceDate:[NSDate date]];
         [self.timer setDate:targetTime];
     }
+    */
+ 
+    NSUserDefaults *userMinutesPreference = [[NSUserDefaults alloc] init];
+    NSUserDefaults *userSecondsPreference = [[NSUserDefaults alloc] init];
+    _minutesFromTableScreen = [userMinutesPreference doubleForKey:@"minutesTransfer"];
+    _secondsFromTableScreen = [userSecondsPreference doubleForKey:@"secondsTransfer"];
+    double timePreference = (_minutesFromTableScreen * 60) + _secondsFromTableScreen;
+    
+    if (timePreference != 0)
+    {
+        _targetTime = [NSDate dateWithTimeInterval:timePreference
+                                                 sinceDate:[NSDate date]];
+        [self.timer setDate:_targetTime];
+    }
+    
 }
 
 - (void)didDeactivate {

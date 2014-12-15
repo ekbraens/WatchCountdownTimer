@@ -14,6 +14,12 @@
                             <color key="textColor" red="0.3497767047" green="0.052037898169999999" blue="0.41559103260000002" alpha="1" colorSpace="calibratedRGB"/>
                             <calendarUnit key="units" minute="YES" second="YES"/>
                         </timer>
+                        <button width="0.40000000000000013" alignment="right" title="Set Time" id="QNZ-jP-kdO">
+                            <connections>
+                                <action selector="moveToMinutes" destination="AgC-eL-Hgc" id="bdt-Um-3KP"/>
+                                <segue destination="OsW-Ft-j4L" kind="modal" id="Lge-q1-wPn"/>
+                            </connections>
+                        </button>
                         <switch width="1" alignment="left" verticalAlignment="bottom" value="YES" title="Start/Stop" id="0dM-Pa-pUm">
                             <connections>
                                 <action selector="switchAction:" destination="AgC-eL-Hgc" id="Cum-5K-PYC"/>
@@ -47,7 +53,6 @@
                     <connections>
                         <outlet property="stopSwitch" destination="0dM-Pa-pUm" id="PZV-xu-VWy"/>
                         <outlet property="timer" destination="hAo-s6-Clg" id="u8n-jg-dip"/>
-                        <segue destination="Bu1-kZ-TEA" kind="relationship" relationship="nextPage" id="186-u6-khY"/>
                     </connections>
                 </controller>
             </objects>
@@ -131,7 +136,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="543" y="-23.5"/>
+            <point key="canvasLocation" x="543" y="454.5"/>
         </scene>
         <!--Wont Work-->
         <scene sceneID="cn7-VW-7Oz">
@@ -185,41 +190,65 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="543" y="458.0000010356307"/>
+            <point key="canvasLocation" x="543" y="695.0000010356307"/>
         </scene>
         <!--Minutes?-->
         <scene sceneID="Z30-WZ-VNJ">
             <objects>
-                <controller title="Minutes?" id="OsW-Ft-j4L">
+                <controller title="Minutes?" id="OsW-Ft-j4L" customClass="MinutesSelectionInterfaceCtrlr">
                     <items>
                         <table alignment="left" layout="vertical" id="XzM-Rk-nw2">
                             <items>
-                                <tableRow id="Ctg-zx-iKX">
-                                    <group key="rootItem" width="1" alignment="left" id="8Ue-yp-kwf"/>
+                                <tableRow identifier="MinutesController" id="Ctg-zx-iKX" customClass="MinChooserATableRowCtrlr">
+                                    <group key="rootItem" width="1" alignment="left" id="8Ue-yp-kwf">
+                                        <items>
+                                            <label alignment="center" text="Label" textAlignment="center" id="0Ev-6f-KQu"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="minLabel" destination="0Ev-6f-KQu" id="TFC-li-gcf"/>
+                                        <segue destination="WWS-Zz-SCn" kind="modal" id="V2v-vE-r4F"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="XzM-Rk-nw2" id="e4H-Ow-Iao"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="543" y="697"/>
+            <point key="canvasLocation" x="543" y="-27"/>
         </scene>
         <!--Seconds?-->
         <scene sceneID="yvY-6l-ydo">
             <objects>
-                <controller title="Seconds?" id="WWS-Zz-SCn">
+                <controller title="Seconds?" id="WWS-Zz-SCn" customClass="SecondsSelectionInterfaceCtrlr">
                     <items>
                         <table alignment="left" layout="vertical" id="uun-rI-ceV">
                             <items>
-                                <tableRow id="c08-yh-ZnI">
-                                    <group key="rootItem" width="1" alignment="left" id="eMs-Na-Pvg"/>
+                                <tableRow identifier="SecondsController" id="c08-yh-ZnI" customClass="SecChooserATableRowCtrlr">
+                                    <group key="rootItem" width="1" alignment="left" id="eMs-Na-Pvg">
+                                        <items>
+                                            <label alignment="center" text="Label" textAlignment="center" id="4eR-3n-iVT"/>
+                                        </items>
+                                        <connections>
+                                            <segue destination="AgC-eL-Hgc" kind="modal" id="F6a-WT-l2D"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="SecLabel" destination="4eR-3n-iVT" id="Lgb-EA-Y0g"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="uun-rI-ceV" id="uil-gf-ec0"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="722" y="698"/>
+            <point key="canvasLocation" x="723" y="-27"/>
         </scene>
         <!--Alt Set Time-->
         <scene sceneID="rjL-aH-d6e">
@@ -234,9 +263,6 @@
                                             <label alignment="center" verticalAlignment="center" text="0" id="cXB-Ln-wEM"/>
                                         </items>
                                     </group>
-                                    <connections>
-                                        <outlet property="minLabel" destination="cXB-Ln-wEM" id="mLL-GG-qH1"/>
-                                    </connections>
                                 </tableRow>
                                 <tableRow identifier="SecondsToucher" id="lyC-gh-Chz" customClass="SecChooserATableRowCtrlr">
                                     <group key="rootItem" width="1" alignment="left" id="afo-xV-ggi">
@@ -244,9 +270,6 @@
                                             <label alignment="left" text="0" id="3q2-m3-F3R"/>
                                         </items>
                                     </group>
-                                    <connections>
-                                        <outlet property="SecLabel" destination="3q2-m3-F3R" id="ZLa-pf-FEM"/>
-                                    </connections>
                                 </tableRow>
                             </items>
                         </table>

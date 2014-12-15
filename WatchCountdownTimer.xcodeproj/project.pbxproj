@@ -22,6 +22,8 @@
 		D50CD8E61A341D380065B6F6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50CD8E51A341D380065B6F6 /* Interface.storyboard */; };
 		D50CD8E81A341D380065B6F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50CD8E71A341D380065B6F6 /* Images.xcassets */; };
 		D50CD8EB1A341D380065B6F6 /* WatchCountdownTimer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D50CD8CD1A341D380065B6F6 /* WatchCountdownTimer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D538CC421A3E94B9007DF864 /* MinutesSelectionInterfaceCtrlr.m in Sources */ = {isa = PBXBuildFile; fileRef = D538CC411A3E94B8007DF864 /* MinutesSelectionInterfaceCtrlr.m */; };
+		D538CC451A3E94E5007DF864 /* SecondsSelectionInterfaceCtrlr.m in Sources */ = {isa = PBXBuildFile; fileRef = D538CC441A3E94E5007DF864 /* SecondsSelectionInterfaceCtrlr.m */; };
 		D55BB52D1A3A8AC300FA5E2A /* SecChooserATableRowCtrlr.m in Sources */ = {isa = PBXBuildFile; fileRef = D55BB52C1A3A8AC300FA5E2A /* SecChooserATableRowCtrlr.m */; };
 		D597C99C1A354B350079A725 /* TimerButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = D597C99B1A354B350079A725 /* TimerButtons.m */; };
 		D5A19B911A393AF200271654 /* MinChooserATableRowCtrlr.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A19B901A393AF200271654 /* MinChooserATableRowCtrlr.m */; };
@@ -92,6 +94,10 @@
 		D50CD8E41A341D380065B6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D50CD8E51A341D380065B6F6 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		D50CD8E71A341D380065B6F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D538CC401A3E94B8007DF864 /* MinutesSelectionInterfaceCtrlr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinutesSelectionInterfaceCtrlr.h; sourceTree = "<group>"; };
+		D538CC411A3E94B8007DF864 /* MinutesSelectionInterfaceCtrlr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinutesSelectionInterfaceCtrlr.m; sourceTree = "<group>"; };
+		D538CC431A3E94E5007DF864 /* SecondsSelectionInterfaceCtrlr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondsSelectionInterfaceCtrlr.h; sourceTree = "<group>"; };
+		D538CC441A3E94E5007DF864 /* SecondsSelectionInterfaceCtrlr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondsSelectionInterfaceCtrlr.m; sourceTree = "<group>"; };
 		D55BB52B1A3A8AC300FA5E2A /* SecChooserATableRowCtrlr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecChooserATableRowCtrlr.h; sourceTree = "<group>"; };
 		D55BB52C1A3A8AC300FA5E2A /* SecChooserATableRowCtrlr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecChooserATableRowCtrlr.m; sourceTree = "<group>"; };
 		D597C99A1A354B350079A725 /* TimerButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerButtons.h; sourceTree = "<group>"; };
@@ -207,8 +213,6 @@
 				D50CD8D51A341D380065B6F6 /* InterfaceController.m */,
 				D597C99A1A354B350079A725 /* TimerButtons.h */,
 				D597C99B1A354B350079A725 /* TimerButtons.m */,
-				D5B943521A382DCD000753DB /* AltSetTime.h */,
-				D5B943531A382DCD000753DB /* AltSetTime.m */,
 				D5A19B8F1A393AF200271654 /* MinChooserATableRowCtrlr.h */,
 				D5A19B901A393AF200271654 /* MinChooserATableRowCtrlr.m */,
 				D55BB52B1A3A8AC300FA5E2A /* SecChooserATableRowCtrlr.h */,
@@ -216,6 +220,12 @@
 				D50CD8D71A341D380065B6F6 /* GlanceController.h */,
 				D50CD8D81A341D380065B6F6 /* GlanceController.m */,
 				D50CD8DA1A341D380065B6F6 /* Images.xcassets */,
+				D538CC401A3E94B8007DF864 /* MinutesSelectionInterfaceCtrlr.h */,
+				D538CC411A3E94B8007DF864 /* MinutesSelectionInterfaceCtrlr.m */,
+				D538CC431A3E94E5007DF864 /* SecondsSelectionInterfaceCtrlr.h */,
+				D538CC441A3E94E5007DF864 /* SecondsSelectionInterfaceCtrlr.m */,
+				D5B943521A382DCD000753DB /* AltSetTime.h */,
+				D5B943531A382DCD000753DB /* AltSetTime.m */,
 				D50CD8D21A341D380065B6F6 /* Supporting Files */,
 			);
 			path = "WatchCountdownTimer WatchKit Extension";
@@ -426,6 +436,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D538CC451A3E94E5007DF864 /* SecondsSelectionInterfaceCtrlr.m in Sources */,
+				D538CC421A3E94B9007DF864 /* MinutesSelectionInterfaceCtrlr.m in Sources */,
 				D50CD8D61A341D380065B6F6 /* InterfaceController.m in Sources */,
 				D5A19B911A393AF200271654 /* MinChooserATableRowCtrlr.m in Sources */,
 				D597C99C1A354B350079A725 /* TimerButtons.m in Sources */,

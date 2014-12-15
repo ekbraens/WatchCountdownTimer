@@ -52,6 +52,7 @@
     return self;
 }
 
+// fix connection to labels!!
 - (void)configureBothTables {
     NSMutableArray *typesStrings = [[NSMutableArray alloc] init];
     for (int i = 0; i < _numOfChoices; ++i)

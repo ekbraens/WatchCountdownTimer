@@ -13,7 +13,6 @@
 
 @end
 
-
 @implementation GlanceController
 
 - (instancetype)initWithContext:(id)context {
