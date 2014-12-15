@@ -56,7 +56,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="164" y="214"/>
+            <point key="canvasLocation" x="214" y="214"/>
         </scene>
         <!--Set Time-->
         <scene sceneID="k7J-Mg-fOO">
@@ -191,6 +191,26 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="543" y="695.0000010356307"/>
+        </scene>
+        <!--Slider Interface Controller-->
+        <scene sceneID="aBy-Bb-wOb">
+            <objects>
+                <controller id="ufI-Fn-3Kg" customClass="SliderInterfaceController">
+                    <items>
+                        <slider width="1" alignment="left" verticalAlignment="bottom" value="1" maximum="60" steps="30" id="FS9-yj-NOX">
+                            <connections>
+                                <action selector="sliderAction:" destination="ufI-Fn-3Kg" id="GX5-q4-gJV"/>
+                            </connections>
+                        </slider>
+                        <label alignment="center" verticalAlignment="center" text="Slider Label" textAlignment="center" id="Ljd-Cg-8H0"/>
+                    </items>
+                    <connections>
+                        <outlet property="slider" destination="FS9-yj-NOX" id="vcD-eD-CHA"/>
+                        <outlet property="sliderLabel" destination="Ljd-Cg-8H0" id="f8f-oI-mwS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="543" y="-260"/>
         </scene>
         <!--Minutes?-->
         <scene sceneID="Z30-WZ-VNJ">

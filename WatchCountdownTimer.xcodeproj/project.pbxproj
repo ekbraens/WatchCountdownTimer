@@ -24,6 +24,7 @@
 		D50CD8EB1A341D380065B6F6 /* WatchCountdownTimer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D50CD8CD1A341D380065B6F6 /* WatchCountdownTimer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D538CC421A3E94B9007DF864 /* MinutesSelectionInterfaceCtrlr.m in Sources */ = {isa = PBXBuildFile; fileRef = D538CC411A3E94B8007DF864 /* MinutesSelectionInterfaceCtrlr.m */; };
 		D538CC451A3E94E5007DF864 /* SecondsSelectionInterfaceCtrlr.m in Sources */ = {isa = PBXBuildFile; fileRef = D538CC441A3E94E5007DF864 /* SecondsSelectionInterfaceCtrlr.m */; };
+		D53CEDE21A3F75250020CA26 /* SliderInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53CEDE11A3F75250020CA26 /* SliderInterfaceController.m */; };
 		D55BB52D1A3A8AC300FA5E2A /* SecChooserATableRowCtrlr.m in Sources */ = {isa = PBXBuildFile; fileRef = D55BB52C1A3A8AC300FA5E2A /* SecChooserATableRowCtrlr.m */; };
 		D597C99C1A354B350079A725 /* TimerButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = D597C99B1A354B350079A725 /* TimerButtons.m */; };
 		D5A19B911A393AF200271654 /* MinChooserATableRowCtrlr.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A19B901A393AF200271654 /* MinChooserATableRowCtrlr.m */; };
@@ -98,6 +99,8 @@
 		D538CC411A3E94B8007DF864 /* MinutesSelectionInterfaceCtrlr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinutesSelectionInterfaceCtrlr.m; sourceTree = "<group>"; };
 		D538CC431A3E94E5007DF864 /* SecondsSelectionInterfaceCtrlr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondsSelectionInterfaceCtrlr.h; sourceTree = "<group>"; };
 		D538CC441A3E94E5007DF864 /* SecondsSelectionInterfaceCtrlr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondsSelectionInterfaceCtrlr.m; sourceTree = "<group>"; };
+		D53CEDE01A3F75250020CA26 /* SliderInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderInterfaceController.h; sourceTree = "<group>"; };
+		D53CEDE11A3F75250020CA26 /* SliderInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderInterfaceController.m; sourceTree = "<group>"; };
 		D55BB52B1A3A8AC300FA5E2A /* SecChooserATableRowCtrlr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecChooserATableRowCtrlr.h; sourceTree = "<group>"; };
 		D55BB52C1A3A8AC300FA5E2A /* SecChooserATableRowCtrlr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecChooserATableRowCtrlr.m; sourceTree = "<group>"; };
 		D597C99A1A354B350079A725 /* TimerButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerButtons.h; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 				D538CC411A3E94B8007DF864 /* MinutesSelectionInterfaceCtrlr.m */,
 				D538CC431A3E94E5007DF864 /* SecondsSelectionInterfaceCtrlr.h */,
 				D538CC441A3E94E5007DF864 /* SecondsSelectionInterfaceCtrlr.m */,
+				D53CEDE01A3F75250020CA26 /* SliderInterfaceController.h */,
+				D53CEDE11A3F75250020CA26 /* SliderInterfaceController.m */,
 				D5B943521A382DCD000753DB /* AltSetTime.h */,
 				D5B943531A382DCD000753DB /* AltSetTime.m */,
 				D50CD8D21A341D380065B6F6 /* Supporting Files */,
@@ -439,6 +444,7 @@
 				D538CC451A3E94E5007DF864 /* SecondsSelectionInterfaceCtrlr.m in Sources */,
 				D538CC421A3E94B9007DF864 /* MinutesSelectionInterfaceCtrlr.m in Sources */,
 				D50CD8D61A341D380065B6F6 /* InterfaceController.m in Sources */,
+				D53CEDE21A3F75250020CA26 /* SliderInterfaceController.m in Sources */,
 				D5A19B911A393AF200271654 /* MinChooserATableRowCtrlr.m in Sources */,
 				D597C99C1A354B350079A725 /* TimerButtons.m in Sources */,
 				D50CD8D91A341D380065B6F6 /* GlanceController.m in Sources */,
