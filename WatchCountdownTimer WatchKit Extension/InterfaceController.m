@@ -10,12 +10,12 @@
 // DONE! :: transfer "intput" from 2nd watchface to initial one... how?
 // DONE! :: look into making the switch work
 // DONE! :: make new scrolling interface, first for minutes, then it goes to seconds, then back
+// DONE! :: thought!! use a slider to set the timer... hmmm?
 
 // SUSPENDED :: make new time selection screen, using tables for minutes and seconds
 //              i am still holding out hope that i can have two tables on one controller
 //              if not, it looks ugly and will have to try something different
 // TODO :: make sure when the timer reaches zero, you can still increment "common" increases
-// TODO :: thought!! use a slider to set the timer... hmmm?
 
 #import "InterfaceController.h"
 
